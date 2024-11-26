@@ -3834,7 +3834,7 @@ img.u-pull-left {
     font-size        : var(--text-xs);
     line-height      : var(--vspace-1_25);
     color            : white;
-    padding          : 0 1.2rem;
+    padding          : 0 0.9rem;
     position         : absolute;
     top              : var(--vspace-1);
     left             : var(--vspace-1);
@@ -4265,6 +4265,22 @@ section1 {
 }
 .card:hover p {
   color: #f0f0f0;
+}
+
+.carousel-inner > .carousel-item {
+    display: none; /* Cache les autres items */
+    transition: transform 0.6s ease; /* Animation */
+    margin-top: 12%;
+}
+
+.carousel-inner > .carousel-item.active {
+    display: block; /* Affiche uniquement l'item actif */
+}
+
+.modal-popup__scroll {
+    max-height: 800px; /* Hauteur maximale du contenu défilable */
+    overflow-y: scroll; /* Barre de défilement toujours visible */
+    padding-right: 10px; /* Ajoute un espace pour la barre de défilement */
 }
 
 

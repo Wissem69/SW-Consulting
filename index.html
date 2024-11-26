@@ -27,6 +27,7 @@
     <link rel="manifest" href="site.webmanifest">
 
 
+
     <!-- Font Awesome CDN-->
     <link
       rel="stylesheet"
@@ -37,6 +38,8 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+
+
 
 </head>
 
@@ -426,7 +429,7 @@
 
             <!-- ### services
             ================================================== -->
-            <section>
+            <section id="services">
               <div class="row works-portfolio">
                 <div class="column lg-12" data-animate-block>
                 <h2 class="text-pretitle" data-animate-el>
@@ -437,7 +440,7 @@
                 </p>
                 <section1>
                   <div class="row">
-                    <div class="column">
+                    <div class="column" data-animate-el>
                       <div class="card">
                         <div class="icon-wrapper">
                           <i class="fas fa-database"></i>
@@ -448,7 +451,7 @@
                         </p>
                       </div>
                     </div>
-                    <div class="column">
+                    <div class="column" data-animate-el>
                       <div class="card">
                         <div class="icon-wrapper">
                           <i class="fas fa-chart-area"></i>
@@ -460,7 +463,7 @@
                         </p>
                       </div>
                     </div>
-                    <div class="column">
+                    <div class="column" data-animate-el>
                       <div class="card">
                         <div class="icon-wrapper">
                           <i class="fas fa-network-wired"></i>
@@ -476,15 +479,11 @@
                 <div/>
                 <div/>
               </section>
-
-
-
             <!-- end services -->
+
             <!-- ### works
             ================================================== -->
             <section id="works" class="s-works target-section">
-
-
                 <div class="row works-portfolio">
 
                     <div class="column lg-12" data-animate-block>
@@ -501,16 +500,15 @@
                             <li class="folio-list__item column" data-animate-el>
                                 <a class="folio-list__item-link" href="#modal-01">
                                     <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/fuji.jpg"
-                                             srcset="images/portfolio/fuji.jpg 1x, images/portfolio/fuji@2x.jpg 2x"  alt="">
+                                        <img src="images/lifetime.png" alt="">
                                     </div>
 
                                     <div class="folio-list__item-text">
                                         <div class="folio-list__item-cat">
-                                            Website
+                                            LifeTime
                                         </div>
                                         <div class="folio-list__item-title">
-                                            Retro Camera.
+                                            Les facteurs qui impactent l'espérance de vie dans le monde
                                         </div>
                                     </div>
                                 </a>
@@ -629,24 +627,71 @@
                     </div> <!-- end column -->
 
 
-                    <!-- Modal Templates Popup
-                    -------------------------------------------- -->
-                    <div id="modal-01" hidden>
-                        <div class="modal-popup">
-                            <img src="images/portfolio/gallery/g-fuji.jpg" alt="">
+                    <!-- Modal Templates Popup -->
+                  <div id="modal-01" hidden>
+                      <div class="modal-popup">
+                          <img src="images/portfolio/gallery/g-fuji.jpg" alt="">
+                          <!-- Scrollable content -->
+                          <div class="modal-popup__scroll">
+                          <div class="modal-popup__desc">
+                              <!-- Carrousel -->
+                              <div id="carouselExample" class="carousel slide mt-4">
+                                  <div class="carousel-inner">
+                                      <div class="carousel-item active">
+                                          <img src="images/lifetime/carte.png" class="d-block w-100" alt="Image 1">
+                                      </div>
+                                      <div class="carousel-item">
+                                          <img src="images/lifetime/barchart.png" class="d-block w-100" alt="Image 2">
+                                      </div>
+                                  </div>
+                                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                      <span class="visually-hidden">Précédent</span>
+                                  </button>
+                                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                      <span class="visually-hidden">Suivant</span>
+                                  </button>
+                              </div> <!-- end Carrousel -->
 
-                            <div class="modal-popup__desc">
-                                <h5>Retro Camera</h5>
-                                <p>Odio soluta enim quos sit asperiores rerum rerum repudiandae cum. Vel voluptatem alias qui assumenda iure et expedita voluptatem. Ratione officiis quae.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>Branding</li>
-                                    <li>Product Design</li>
-                                </ul>
-                            </div>
 
-                            <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
-                        </div>
-                    </div> <!-- end modal -->
+                                  <h5>L’espérance de vie : Un indicateur clé</h5>
+                                  <p>
+                                      L’espérance de vie est un indicateur clé de santé et de bien-être. Ce projet explore les disparités de l’espérance de vie entre 2000 et 2016,
+                                      en étudiant ses corrélations avec divers facteurs socio-économiques, environnementaux et sanitaires.
+                                  </p>
+                                  <h5>Objectifs du projet :</h5>
+                                  <ul>
+                                      <li>Analyser les tendances globales et régionales de l'espérance de vie.</li>
+                                      <li>Identifier les facteurs les plus influents.</li>
+                                      <li>Visualisation interactive des données pour faciliter leur exploration.</li>
+                                      <li>Intégration des cartes interactives.</li>
+                                      <li>Analyse des corrélations et synthèse des résultats.</li>
+                                  </ul>
+                                  <h5>Résultats :</h5>
+                                  <ul>
+                                      <li>Bar charts dynamiques pour suivre les tendances temporelles par continent.</li>
+                                      <li>Cartes géographiques pour observer les disparités par pays.</li>
+                                      <li>Matrice de corrélation pour identifier les relations clés entre les variables.</li>
+                                      <li>Analyse approfondie des facteurs influençant l’espérance de vie :
+                                          <ul>
+                                              <li>Corrélation positive avec le revenu national brut (RNB).</li>
+                                              <li>Impact majeur de l'accès à l’eau potable et des taux de vaccination.</li>
+                                          </ul>
+                                      </li>
+                                      <li>Intégration des données géographiques (GeoJSON).</li>
+                                      <li>Réduction de l'impact des valeurs manquantes.</li>
+                                      <li>Optimisation des performances pour les visualisations interactives.</li>
+                                      <li>Identification des disparités régionales : espérance de vie variant de 43 ans en Afrique à 78 ans en Europe en 2016.</li>
+                                      <li>Mise en évidence de relations fortes entre santé publique et espérance de vie.</li>
+                                  </ul>
+
+                                  <a href="https://www.behance.net/" class="modal-popup__details"><strong>Lien projet >></strong></a>
+                              </div> <!-- end scrollable content -->
+                          </div>
+                      </div>
+                  </div> <!-- end modal -->
+
 
                     <div id="modal-02" hidden>
                         <div class="modal-popup">
@@ -887,6 +932,10 @@
     ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
