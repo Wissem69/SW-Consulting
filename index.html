@@ -6,6 +6,7 @@
     ================================================== -->
     <meta charset="utf-8">
     <title>SW CONSULTING</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -18,6 +19,9 @@
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    <!--Bootstrap css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <!-- favicons
     ================================================== -->
@@ -58,13 +62,7 @@
     ================================================== -->
     <div class="s-pagewrap">
 
-        <div class="circles">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+
 
 
         <!-- ## site header
@@ -94,41 +92,60 @@
 
         <!-- ## main content
         ==================================================- -->
+
         <main class="s-content">
 
+          <div class="banner-area" id="home"> <!-- div de la banière avec les particules -->
+              <div id="particles-js"></div>
+              <div class="banner-table">
+                <!-- ### intro
+                ================================================== -->
+                <section id="intro" class="s-intro target-section">
 
-            <!-- ### intro
-            ================================================== -->
-            <section id="intro" class="s-intro target-section">
+                    <div class="row intro-content wide">
 
-                <div class="row intro-content wide">
+                        <div class="column">
+                            <div class="text-pretitle with-line">
+                                Bienvenue
+                            </div>
 
-                    <div class="column">
-                        <div class="text-pretitle with-line">
-                            Bienvenue
+                            <h1 class="text-huge">
+
+                                Deux esprits, une vision :<br>
+                                nous sommes deux jeunes ingénieures en data engineering et analysis, prêtes à transformer vos données en atouts stratégiques afin de créer de la valeur pour votre entreprise. <br>
+                            </h1>
                         </div>
 
-                        <h1 class="text-huge">
+                        <ul class="intro-social">
+                            <li><a href="#0">Instagram</a></li>
+                            <li><a href="#0">Twitter</a></li>
+                            <li><a href="#0">Linkedin</a></li>
+                            <li><a href="#0">Github</a></li>
+                        </ul>
 
-                            Deux esprits, une vision :<br>
-                            nous sommes deux jeunes ingénieures en data engineering et analysis, prêtes à transformer vos données en atouts stratégiques afin de créer de la valeur pour votre entreprise. <br>
-                        </h1>
-                    </div>
+                    </div> <!-- end intro content -->
 
-                    <ul class="intro-social">
-                        <li><a href="#0">Instagram</a></li>
-                        <li><a href="#0">Twitter</a></li>
-                        <li><a href="#0">Linkedin</a></li>
-                        <li><a href="#0">Github</a></li>
-                    </ul>
+                    <a href="#about" class="intro-scrolldown smoothscroll">
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"/></svg>
+                    </a>
 
-                </div> <!-- end intro content -->
+                </section> <!-- end s-intro -->
 
-                <a href="#about" class="intro-scrolldown smoothscroll">
-                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"/></svg>
-                </a>
+              </div>
+          </div> <!-- div de la banière avec les particules -->
 
-            </section> <!-- end s-intro -->
+
+
+
+
+
+
+
+
+
+
+
+
 
 
             <!-- ### about Wissem
@@ -484,379 +501,313 @@
             <!-- ### works
             ================================================== -->
             <section id="works" class="s-works target-section">
-                <div class="row works-portfolio">
+        <div class="row works-portfolio">
 
-                    <div class="column lg-12" data-animate-block>
+            <div class="column lg-12" data-animate-block>
 
-                        <h2 class="text-pretitle" data-animate-el>
-                            Recent Works
-                        </h2>
-                        <p class="h1" data-animate-el>
-                            Here are some of my favorite projects I have done lately. Feel free to check them out.
-                        </p>
+                <h2 class="text-pretitle" data-animate-el>
+                    Recent Works
+                </h2>
+                <p class="h1" data-animate-el>
+                    Here are some of my favorite projects I have done lately. Feel free to check them out.
+                </p>
+                <!-- Menu des catégories -->
+                <ul id="category-menu" class="category-menu">
+                    <li onclick="filterByCategory('all')" class="active">Tous</li>
+                    <li onclick="filterByCategory('data-engineer')">Data Engineer</li>
+                    <li onclick="filterByCategory('data-analyse')">Data Analyse</li>
+                    <li onclick="filterByCategory('data-science')">Data Science</li>
+                </ul>
 
-                        <ul class="folio-list row block-lg-one-half block-stack-on-1000">
+                <!-- Liste des projets -->
+                <ul class="folio-list row block-lg-one-half block-stack-on-1000">
+                  <!-- Projet 1 - Data Analyse -->
+                    <li class="folio-list__item column" data-category="data-analyse" data-animate-el>
+                        <a class="folio-list__item-link" href="#modal-01">
+                            <div class="folio-list__item-pic">
+                                <img src="images/lifetime.png" alt="">
+                            </div>
 
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-01">
-                                    <div class="folio-list__item-pic">
-                                        <img src="images/lifetime.png" alt="">
-                                    </div>
+                            <div class="folio-list__item-text">
+                                <div class="folio-list__item-cat">
+                                    LifeTime
+                                </div>
+                                <div class="folio-list__item-title">
+                                    Les facteurs qui impactent l'espérance de vie dans le monde
+                                </div>
+                            </div>
+                        </a>
+                        <a class="folio-list__proj-link" href="#" title="project link">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                        </a>
+                    </li>
+                    <!--Fin Projet 1 -->
+                    <!-- Projet 2 - Data Analyse -->
+                    <li class="folio-list__item column" data-category="data-analyse" data-animate-el>
+                        <a class="folio-list__item-link" href="#modal-02">
+                            <div class="folio-list__item-pic">
+                                <img src="images/portfolio/lamp.jpg"
+                                     srcset="images/portfolio/lamp.jpg 1x, images/portfolio/lamp@2x.jpg 2x" alt="">
+                            </div>
 
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            LifeTime
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            Les facteurs qui impactent l'espérance de vie dans le monde
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="#" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li> <!--end folio-list__item -->
+                            <div class="folio-list__item-text">
+                                <div class="folio-list__item-cat">
+                                    Product Design
+                                </div>
+                                <div class="folio-list__item-title">
+                                    The White Lamp.
+                                </div>
+                            </div>
+                        </a>
+                        <a class="folio-list__proj-link" href="#" title="project link">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                        </a>
+                    </li>
+                    <!--Fin Projet 2 -->
+                    <!-- Projet 3 - Data Engineer -->
+                    <li class="folio-list__item column" data-category="data-engineer" data-animate-el>
+                        <a class="folio-list__item-link" href="#modal-03">
+                            <div class="folio-list__item-pic">
+                                <img src="images/portfolio/rucksack.jpg"
+                                     srcset="images/portfolio/rucksack.jpg 1x, images/portfolio/rucksack@2x.jpg 2x" alt="">
+                            </div>
 
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-02">
-                                    <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/lamp.jpg"
-                                             srcset="images/portfolio/lamp.jpg 1x, images/portfolio/lamp@2x.jpg 2x" alt="">
-                                    </div>
+                            <div class="folio-list__item-text">
+                                <div class="folio-list__item-cat">
+                                    Branding
+                                </div>
+                                <div class="folio-list__item-title">
+                                    Rucksuck.
+                                </div>
+                            </div>
+                        </a>
+                        <a class="folio-list__proj-link" href="#" title="project link">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                        </a>
+                    </li>
+                    <!--Fin Projet 3 -->
+                    <!-- Projet 4 - Data Engineer -->
+                    <li class="folio-list__item column" data-category="data-engineer" data-animate-el>
+                        <a class="folio-list__item-link" href="#modal-04">
+                            <div class="folio-list__item-pic">
+                                <img src="images/portfolio/skaterboy.jpg"
+                                     srcset="images/portfolio/skaterboy.jpg 1x, images/portfolio/skaterboy@2x.jpg 2x" alt="">
+                            </div>
 
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            Product Design
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            The White Lamp.
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="#" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li> <!--end folio-list__item -->
+                            <div class="folio-list__item-text">
+                                <div class="folio-list__item-cat">
+                                    Website
+                                </div>
+                                <div class="folio-list__item-title">
+                                    Since Day One.
+                                </div>
+                            </div>
+                        </a>
+                        <a class="folio-list__proj-link" href="#" title="project link">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                        </a>
+                    </li>
+                    <!--Fin Projet 4 -->
+                    <!-- Projet 5 - Data Science -->
+                    <li class="folio-list__item column" data-category="data-science" data-animate-el>
+                        <a class="folio-list__item-link" href="#modal-05">
+                            <div class="folio-list__item-pic">
+                                <img src="images/portfolio/sanddunes.jpg"
+                                     srcset="images/portfolio/sanddunes.jpg 1x, images/portfolio/sanddunes@2x.jpg 2x" alt="">
+                            </div>
 
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-03">
-                                    <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/rucksack.jpg"
-                                             srcset="images/portfolio/rucksack.jpg 1x, images/portfolio/rucksack@2x.jpg 2x" alt="">
-                                    </div>
+                            <div class="folio-list__item-text">
+                                <div class="folio-list__item-cat">
+                                    Illustration
+                                </div>
+                                <div class="folio-list__item-title">
+                                    Sand Dunes.
+                                </div>
+                            </div>
+                        </a>
+                        <a class="folio-list__proj-link" href="#" title="project link">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                        </a>
+                    </li>
+                    <!--Fin Projet 5 -->
+                    <!-- Projet 6 - Data Science -->
+                    <li class="folio-list__item column" data-category="data-science" data-animate-el>
+                        <a class="folio-list__item-link" href="#modal-06">
+                            <div class="folio-list__item-pic">
+                                <img src="images/portfolio/minimalismo.jpg"
+                                     srcset="images/portfolio/minimalismo.jpg 1x, images/portfolio/minimalismo@2x.jpg 2x" alt="">
+                            </div>
 
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            Branding
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            Rucksuck.
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="#" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li> <!--end folio-list__item -->
+                            <div class="folio-list__item-text">
+                                <div class="folio-list__item-cat">
+                                    Branding
+                                </div>
+                                <div class="folio-list__item-title">
+                                    Minimalismo.
+                                </div>
+                            </div>
+                        </a>
+                        <a class="folio-list__proj-link" href="#" title="project link">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                        </a>
+                    </li>
+                    <!--Fin Projet 6 -->
 
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-04">
-                                    <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/skaterboy.jpg"
-                                             srcset="images/portfolio/skaterboy.jpg 1x, images/portfolio/skaterboy@2x.jpg 2x" alt="">
-                                    </div>
+                </ul> <!-- end liste projets -->
 
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            Website
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            Since Day One.
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="#" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li> <!--end folio-list__item -->
-
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-05">
-                                    <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/sanddunes.jpg"
-                                             srcset="images/portfolio/sanddunes.jpg 1x, images/portfolio/sanddunes@2x.jpg 2x" alt="">
-                                    </div>
-
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            Illustration
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            Sand Dunes.
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="#" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li> <!--end folio-list__item -->
-
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-06">
-                                    <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/minimalismo.jpg"
-                                             srcset="images/portfolio/minimalismo.jpg 1x, images/portfolio/minimalismo@2x.jpg 2x" alt="">
-                                    </div>
-
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            Branding
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            Minimalismo.
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="#" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li> <!--end folio-list__item -->
-
-                        </ul> <!-- end folio-list -->
-
-                    </div> <!-- end column -->
-
-
-                    <!-- Modal Templates Popup -->
-                  <div id="modal-01" hidden>
-                      <div class="modal-popup">
-                          <img src="images/portfolio/gallery/g-fuji.jpg" alt="">
-                          <!-- Scrollable content -->
-                          <div class="modal-popup__scroll">
-                          <div class="modal-popup__desc">
-                              <!-- Carrousel -->
-                              <div id="carouselExample" class="carousel slide mt-4">
-                                  <div class="carousel-inner">
-                                      <div class="carousel-item active">
-                                          <img src="images/lifetime/carte.png" class="d-block w-100" alt="Image 1">
-                                      </div>
-                                      <div class="carousel-item">
-                                          <img src="images/lifetime/barchart.png" class="d-block w-100" alt="Image 2">
-                                      </div>
-                                  </div>
-                                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                      <span class="visually-hidden">Précédent</span>
-                                  </button>
-                                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                      <span class="visually-hidden">Suivant</span>
-                                  </button>
-                              </div> <!-- end Carrousel -->
+            </div> <!-- end column -->
 
 
-                                  <h5>L’espérance de vie : Un indicateur clé</h5>
-                                  <p>
-                                      L’espérance de vie est un indicateur clé de santé et de bien-être. Ce projet explore les disparités de l’espérance de vie entre 2000 et 2016,
-                                      en étudiant ses corrélations avec divers facteurs socio-économiques, environnementaux et sanitaires.
-                                  </p>
-                                  <hr style="height: 0.1px;opacity: 0.2; background-color: black; margin: 10px 0;">
-                                  <h5>Objectifs du projet :</h5>
-                                  <ul>
-                                      <li>Analyser les tendances globales et régionales de l'espérance de vie.</li>
-                                      <li>Identifier les facteurs les plus influents.</li>
-                                      <li>Visualisation interactive des données pour faciliter leur exploration.</li>
-                                      <li>Intégration des cartes interactives.</li>
-                                      <li>Analyse des corrélations et synthèse des résultats.</li>
-                                  </ul>
-                                  <hr style="height: 0.1px;opacity: 0.2; background-color: black; margin: 10px 0;">
-                                  <h5>Résultats :</h5>
-                                  <ul>
-                                      <li>Bar charts dynamiques pour suivre les tendances temporelles par continent.</li>
-                                      <li>Cartes géographiques pour observer les disparités par pays.</li>
-                                      <li>Matrice de corrélation pour identifier les relations clés entre les variables.</li>
-                                      <li>Analyse approfondie des facteurs influençant l’espérance de vie :
-                                          <ul>
-                                              <li>Corrélation positive avec le revenu national brut (RNB).</li>
-                                              <li>Impact majeur de l'accès à l’eau potable et des taux de vaccination.</li>
-                                          </ul>
-                                      </li>
-                                      <li>Intégration des données géographiques (GeoJSON).</li>
-                                      <li>Réduction de l'impact des valeurs manquantes.</li>
-                                      <li>Optimisation des performances pour les visualisations interactives.</li>
-                                      <li>Identification des disparités régionales : espérance de vie variant de 43 ans en Afrique à 78 ans en Europe en 2016.</li>
-                                      <li>Mise en évidence de relations fortes entre santé publique et espérance de vie.</li>
-                                  </ul>
-
-                                  <a href="https://www.behance.net/" class="modal-popup__details"><strong>Lien projet >></strong></a>
-                              </div> <!-- end scrollable content -->
+            <!-- Modal Templates Popup -->
+          <div id="modal-01" hidden>
+              <div class="modal-popup">
+                  <img src="images/portfolio/gallery/g-fuji.jpg" alt="">
+                  <!-- Scrollable content -->
+                  <div class="modal-popup__scroll">
+                  <div class="modal-popup__desc">
+                      <!-- Carrousel -->
+                      <div id="carouselExample" class="carousel slide mt-4">
+                          <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                  <img src="images/lifetime/carte.png" class="d-block w-100" alt="Image 1">
+                              </div>
+                              <div class="carousel-item">
+                                  <img src="images/lifetime/barchart.png" class="d-block w-100" alt="Image 2">
+                              </div>
                           </div>
-                      </div>
-                  </div> <!-- end modal -->
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Précédent</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Suivant</span>
+                          </button>
+                      </div> <!-- end Carrousel -->
+                      <h5>L’espérance de vie : Un indicateur clé</h5>
+                      <p>
+                          L’espérance de vie est un indicateur clé de santé et de bien-être. Ce projet explore les disparités de l’espérance de vie entre 2000 et 2016,
+                          en étudiant ses corrélations avec divers facteurs socio-économiques, environnementaux et sanitaires.
+                      </p>
+                      <hr style="height: 0.1px;opacity: 0.2; background-color: black; margin: 10px 0;">
+                      <h5>Objectifs du projet :</h5>
+                      <ul>
+                          <li>Analyser les tendances globales et régionales de l'espérance de vie.</li>
+                          <li>Identifier les facteurs les plus influents.</li>
+                          <li>Visualisation interactive des données pour faciliter leur exploration.</li>
+                          <li>Intégration des cartes interactives.</li>
+                          <li>Analyse des corrélations et synthèse des résultats.</li>
+                      </ul>
+                      <hr style="height: 0.1px;opacity: 0.2; background-color: black; margin: 10px 0;">
+                      <h5>Résultats :</h5>
+                      <ul>
+                          <li>Bar charts dynamiques pour suivre les tendances temporelles par continent.</li>
+                          <li>Cartes géographiques pour observer les disparités par pays.</li>
+                          <li>Matrice de corrélation pour identifier les relations clés entre les variables.</li>
+                          <li>Analyse approfondie des facteurs influençant l’espérance de vie :
+                              <ul>
+                                  <li>Corrélation positive avec le revenu national brut (RNB).</li>
+                                  <li>Impact majeur de l'accès à l’eau potable et des taux de vaccination.</li>
+                              </ul>
+                          </li>
+                          <li>Intégration des données géographiques (GeoJSON).</li>
+                          <li>Réduction de l'impact des valeurs manquantes.</li>
+                          <li>Optimisation des performances pour les visualisations interactives.</li>
+                          <li>Identification des disparités régionales : espérance de vie variant de 43 ans en Afrique à 78 ans en Europe en 2016.</li>
+                          <li>Mise en évidence de relations fortes entre santé publique et espérance de vie.</li>
+                      </ul>
+
+                      <a href="https://www.behance.net/" class="modal-popup__details"><strong>Lien projet >></strong></a>
+                      </div> <!-- end scrollable content -->
+                  </div>
+              </div>
+          </div> <!-- end modal -->
 
 
-                    <div id="modal-02" hidden>
-                        <div class="modal-popup">
-                            <img src="images/portfolio/gallery/g-lamp.jpg" alt="">
+            <div id="modal-02" hidden>
+                <div class="modal-popup">
+                    <img src="images/portfolio/gallery/g-lamp.jpg" alt="">
 
-                            <div class="modal-popup__desc">
-                                <h5>The White Lamp</h5>
-                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>Branding</li>
-                                </ul>
-                            </div>
+                    <div class="modal-popup__desc">
+                        <h5>The White Lamp</h5>
+                        <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+                        <ul class="modal-popup__cat">
+                            <li>Branding</li>
+                        </ul>
+                    </div>
 
-                            <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
-                        </div>
-                    </div> <!-- end modal -->
+                    <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
+                </div>
+            </div> <!-- end modal -->
 
-                    <div id="modal-03" hidden>
-                        <div class="modal-popup">
-                            <img src="images/portfolio/gallery/g-rucksack.jpg" alt="">
+            <div id="modal-03" hidden>
+                <div class="modal-popup">
+                    <img src="images/portfolio/gallery/g-rucksack.jpg" alt="">
 
-                            <div class="modal-popup__desc">
-                                <h5>Rucksuck</h5>
-                                <p>Exercitationem reprehenderit quod explicabo consequatur aliquid ut magni ut. Deleniti quo corrupti illum velit eveniet ratione necessitatibus ipsam mollitia.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>Product Design</li>
-                                </ul>
-                            </div>
+                    <div class="modal-popup__desc">
+                        <h5>Rucksuck</h5>
+                        <p>Exercitationem reprehenderit quod explicabo consequatur aliquid ut magni ut. Deleniti quo corrupti illum velit eveniet ratione necessitatibus ipsam mollitia.</p>
+                        <ul class="modal-popup__cat">
+                            <li>Product Design</li>
+                        </ul>
+                    </div>
 
-                            <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
-                        </div>
-                    </div> <!-- end modal -->
+                    <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
+                </div>
+            </div> <!-- end modal -->
 
-                    <div id="modal-04" hidden>
-                        <div class="modal-popup">
-                            <img src="images/portfolio/gallery/g-skaterboy.jpg" alt="">
+            <div id="modal-04" hidden>
+                <div class="modal-popup">
+                    <img src="images/portfolio/gallery/g-skaterboy.jpg" alt="">
 
-                            <div class="modal-popup__desc">
-                                <h5>Since Day One</h5>
-                                <p>Dolores velit qui quos nobis. Aliquam delectus voluptas quos possimus non voluptatem voluptas voluptas. Est doloribus eligendi porro doloribus voluptatum.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>Website</li>
-                                </ul>
-                            </div>
+                    <div class="modal-popup__desc">
+                        <h5>Since Day One</h5>
+                        <p>Dolores velit qui quos nobis. Aliquam delectus voluptas quos possimus non voluptatem voluptas voluptas. Est doloribus eligendi porro doloribus voluptatum.</p>
+                        <ul class="modal-popup__cat">
+                            <li>Website</li>
+                        </ul>
+                    </div>
 
-                            <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
-                        </div>
-                    </div> <!-- end modal -->
+                    <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
+                </div>
+            </div> <!-- end modal -->
 
-                    <div id="modal-05" hidden>
-                        <div class="modal-popup">
+            <div id="modal-05" hidden>
+                <div class="modal-popup">
 
-                            <img src="images/portfolio/gallery/g-sanddunes.jpg" alt="">
+                    <img src="images/portfolio/gallery/g-sanddunes.jpg" alt="">
 
-                            <div class="modal-popup__desc">
-                                <h5>Sand Dunes</h5>
-                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>Illustration</li>
-                                </ul>
-                            </div>
+                    <div class="modal-popup__desc">
+                        <h5>Sand Dunes</h5>
+                        <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+                        <ul class="modal-popup__cat">
+                            <li>Illustration</li>
+                        </ul>
+                    </div>
 
-                            <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
-                        </div>
-                    </div> <!-- end modal -->
+                    <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
+                </div>
+            </div> <!-- end modal -->
 
-                    <div id="modal-06" hidden>
-                        <div class="modal-popup">
-                            <img src="images/portfolio/gallery/g-minimalismo.jpg" alt="">
+            <div id="modal-06" hidden>
+                <div class="modal-popup">
+                    <img src="images/portfolio/gallery/g-minimalismo.jpg" alt="">
 
-                            <div class="modal-popup__desc">
-                                <h5>Minimalismo</h5>
-                                <p>Quisquam vel libero consequuntur autem voluptas. Qui aut vero. Omnis fugit mollitia cupiditate voluptas. Aenean sollicitudin, lorem quis bibendum auctor.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>Branding</li>
-                                    <li>Product Design</li>
-                                </ul>
-                            </div>
+                    <div class="modal-popup__desc">
+                        <h5>Minimalismo</h5>
+                        <p>Quisquam vel libero consequuntur autem voluptas. Qui aut vero. Omnis fugit mollitia cupiditate voluptas. Aenean sollicitudin, lorem quis bibendum auctor.</p>
+                        <ul class="modal-popup__cat">
+                            <li>Branding</li>
+                            <li>Product Design</li>
+                        </ul>
+                    </div>
 
-                            <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
-                        </div>
-                    </div> <!-- end modal -->
+                    <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
+                </div>
+            </div> <!-- end modal -->
 
-                </div> <!-- end works-portfolio -->
-
-
-                <div class="row testimonials">
-                    <div class="column lg-12" data-animate-block>
-
-                        <div class="swiper-container testimonial-slider" data-animate-el>
-
-                            <div class="swiper-wrapper">
-
-                                <div class="testimonial-slider__slide swiper-slide">
-                                    <div class="testimonial-slider__author">
-                                        <img src="images/avatars/user-02.jpg" alt="Author image" class="testimonial-slider__avatar">
-                                        <cite class="testimonial-slider__cite">
-                                            <strong>Tim Cook</strong>
-                                            <span>CEO, Apple</span>
-                                        </cite>
-                                    </div>
-                                    <p>
-                                    Molestiae incidunt consequatur quis ipsa autem nam sit enim magni. Voluptas tempore rem.
-                                    Explicabo a quaerat sint autem dolore ducimus ut consequatur neque.  Nisi dolores quaerat fuga rem nihil nostrum.
-                                    Laudantium quia consequatur molestias delectus culpa.
-                                    </p>
-                                </div> <!-- end testimonial-slider__slide -->
-
-                                <div class="testimonial-slider__slide swiper-slide">
-                                    <div class="testimonial-slider__author">
-                                        <img src="images/avatars/user-03.jpg" alt="Author image" class="testimonial-slider__avatar">
-                                        <cite class="testimonial-slider__cite">
-                                            <strong>Sundar Pichai</strong>
-                                            <span>CEO, Google</span>
-                                        </cite>
-                                    </div>
-                                    <p>
-                                    Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi adipisci.
-                                    Nisi eaque consequatur. Voluptatem dignissimos ut ducimus accusantium perspiciatis.
-                                    Quasi voluptas eius distinctio. Atque eos maxime.
-                                    </p>
-                                </div> <!-- end testimonial-slider__slide -->
-
-                                <div class="testimonial-slider__slide swiper-slide">
-                                    <div class="testimonial-slider__author">
-                                        <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonial-slider__avatar">
-                                        <cite class="testimonial-slider__cite">
-                                            <strong>Satya Nadella</strong>
-                                            <span>CEO, Microsoft</span>
-                                        </cite>
-                                    </div>
-                                    <p>
-                                    Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam.
-                                    Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas eius distinctio.
-                                    Voluptatem dignissimos ut.
-                                    </p>
-                                </div> <!-- end testimonial-slider__slide -->
-
-                                <div class="testimonial-slider__slide swiper-slide">
-                                    <div class="testimonial-slider__author">
-                                        <img src="images/avatars/user-06.jpg" alt="Author image" class="testimonial-slider__avatar">
-                                        <cite class="testimonial-slider__cite">
-                                            <strong>Jeff Bezos</strong>
-                                            <span>CEO, Amazon</span>
-                                        </cite>
-                                    </div>
-                                    <p>
-                                    Nunc interdum lacus sit amet orci. Vestibulum dapibus nunc ac augue. Fusce vel dui. In ac felis
-                                    quis tortor malesuada pretium. Curabitur vestibulum aliquam leo. Qui sed at corrupti expedita voluptas odit.
-                                    Nihil ea quia nesciunt. Ducimus aut sed ipsam.
-                                    </p>
-                                </div> <!-- end testimonial-slider__slide -->
-
-                            </div> <!-- end swiper-wrapper -->
-
-                            <div class="swiper-pagination"></div>
-
-                        </div> <!-- end swiper-container -->
-
-                    </div> <!-- end column -->
-                </div> <!-- end row testimonials -->
-
-            </section> <!-- end s-works -->
+        </div>
+      </section>
 
 
             <!-- ### contact
@@ -932,6 +883,27 @@
 
     <!-- Java Script
     ================================================== -->
+    <script>
+    function filterByCategory(category) {
+        const projects = document.querySelectorAll('.folio-list__item');
+        const categories = document.querySelectorAll('#category-menu li');
+
+        // Mettre à jour l'état actif du menu
+        categories.forEach(cat => cat.classList.remove('active'));
+        document.querySelector(`#category-menu li[onclick*="${category}"]`).classList.add('active');
+
+        // Filtrer les projets
+        projects.forEach(project => {
+            if (category === 'all' || project.dataset.category === category) {
+                project.style.display = 'block';
+            } else {
+                project.style.display = 'none';
+            }
+        });
+    }
+    </script>
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 

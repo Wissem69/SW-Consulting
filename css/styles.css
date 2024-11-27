@@ -312,13 +312,21 @@
  * github.com/necolas/normalize.css
  * -------------------------------------------------------------------- */
 
-html {
+html,body {
     line-height              : 1.15;
     -webkit-text-size-adjust : 100%;
+    height: 100%;
 }
 
 body {
     margin : 0;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #333333;
+    font-weight: 400;
 }
 
 main {
@@ -4281,6 +4289,102 @@ section1 {
     max-height: 800px; /* Hauteur maximale du contenu défilable */
     overflow-y: scroll; /* Barre de défilement toujours visible */
     padding-right: 10px; /* Ajoute un espace pour la barre de défilement */
+}
+
+/* style menu catégorisation des projets */
+.category-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 40px 0;
+    padding: 0;
+    gap: 40px; /* Espacement plus important pour un aspect plus aéré */
+    font-family: 'Serif', 'Georgia', serif; /* Typographie élégante et raffinée */
+    font-size: 20px; /* Taille de police légèrement plus grande et plus chic */
+    text-transform: uppercase; /* Texte en majuscules pour une touche plus sophistiquée */
+    letter-spacing: 1px; /* Espacement entre les lettres pour un effet plus aérien */
+}
+
+.category-menu li {
+    cursor: pointer;
+    padding: 14px 25px;
+    border-radius: 50px; /* Forme très arrondie, élégante et moderne */
+    background-color: transparent; /* Fond transparent pour un look épuré */
+    color: #333; /* Couleur de texte douce et élégante */
+    font-weight: normal;
+    border: 1px solid #B0B0B0; /* Bordure fine et subtile */
+    transition: all 0.3s ease; /* Transition fluide pour tous les effets */
+    text-align: center;
+}
+
+.category-menu li:hover {
+    background-color: #F8F8F8; /* Un léger gris clair pour l'effet de survol */
+    color: #333; /* Maintient la couleur du texte pour rester chic */
+    border-color: #A0A0A0; /* Changement subtil de la couleur de la bordure */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1); /* Ombre légère pour l'effet de profondeur */
+    transform: translateY(-3px); /* Légère élévation lors du survol pour un effet plus raffiné */
+}
+
+.category-menu li.active {
+    background-color: hsl(36deg 75% 71%); /* Or doux pour l'élément actif, symbolisant l'élégance */
+    color: white; /* Texte blanc sur fond doré pour un effet chic */
+    font-weight: bold;
+    border-color: hsl(36deg 75% 71%); /* Bordure dorée pour accentuer l'élément actif */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1); /* Ombre plus marquée pour l'élément actif */
+}
+
+/* Liste des projets */
+.folio-list__item {
+    display: block;
+    font-family: 'Arial', sans-serif;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Style particule de l'accueil */
+.banner-area{
+    /*background-image: url(../images/lifetime.png); */
+    /*background-color: #141516;*/
+    background-position: center;
+    background-size:cover;
+    position: relative;
+    height: 100%;
+}
+.banner-area::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background: rgba(0,0,0,0.7);*/
+    content: '';
+}
+.banner-area b{
+    font-weight: 100;
+}
+.banner-table{
+    display: table;
+    margin: 0;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+
+.banner-table-cell{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+canvas{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 
