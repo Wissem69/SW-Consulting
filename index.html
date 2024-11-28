@@ -80,8 +80,8 @@
                         <li><a href="index.html" class="home-link">SW CONSULTING</a></li>
                         <li class="current"><a href="#intro" class="smoothscroll">ACCUEIL</a></li>
                         <li><a href="#about" class="smoothscroll">QUI SOMMES NOUS? </a></li>
-                        <li><a href="#works" class="smoothscroll">NOS PROJETS</a></li>
                         <li><a href="#services" class="smoothscroll">Nos Services </a></li>
+                        <li><a href="#works" class="smoothscroll">NOS PROJETS</a></li>
                         <li><a href="#contact" class="smoothscroll">CONTACT </a></li>
                     </ul>
                 </nav>
@@ -108,20 +108,18 @@
                             <div class="text-pretitle with-line">
                                 Bienvenue
                             </div>
+                                <img src="images/logo-SW-png.png">
 
-                            <h1 class="text-huge">
+                            <h2 class="text-center">  
+                                Deux esprits, une vision :
+                            </h2>
+                            <h3 class="text-center">
 
-                                Deux esprits, une vision :<br>
-                                nous sommes deux jeunes ingénieures en data engineering et analysis, prêtes à transformer vos données en atouts stratégiques afin de créer de la valeur pour votre entreprise. <br>
-                            </h1>
+                                Nous sommes deux jeunes ingénieures en data engineering et analysis, prêtes à transformer vos données en atouts stratégiques afin de créer de la valeur pour votre entreprise. <br>
+                            </h3>
                         </div>
 
-                        <ul class="intro-social">
-                            <li><a href="#0">Instagram</a></li>
-                            <li><a href="#0">Twitter</a></li>
-                            <li><a href="#0">Linkedin</a></li>
-                            <li><a href="#0">Github</a></li>
-                        </ul>
+                        
 
                     </div> <!-- end intro content -->
 
@@ -133,20 +131,6 @@
 
               </div>
           </div> <!-- div de la banière avec les particules -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             <!-- ### about Wissem
             ================================================== -->
@@ -464,7 +448,7 @@
                         </div>
                         <h3>Ingénierie de données</h3>
                         <p>
-                          Solutions robustes d’extraction, stockage et traitement des grands flux de données.
+                          Solutions robustes d'extraction, stockage et traitement des grands flux de données.
                         </p>
                       </div>
                     </div>
@@ -475,7 +459,7 @@
                         </div>
                         <h3>Analyse de données</h3>
                         <p>
-                          - Développement d'une stratégie de collecte et d’utilisation des données en fonction de leurs objectifs. </br>
+                          - Développement d'une stratégie de collecte et d'utilisation des données en fonction de leurs objectifs. </br>
                           - Exploration des dopnnées et mise en place de tableaux de bord.
                         </p>
                       </div>
@@ -568,16 +552,16 @@
                     <li class="folio-list__item column" data-category="data-engineer" data-animate-el>
                         <a class="folio-list__item-link" href="#modal-03">
                             <div class="folio-list__item-pic">
-                                <img src="images/portfolio/rucksack.jpg"
-                                     srcset="images/portfolio/rucksack.jpg 1x, images/portfolio/rucksack@2x.jpg 2x" alt="">
+                                <img src="images/DE1/uber-icone.webp"
+                                     srcset="images/DE1/uber-icone.webp 1x, images/portfolio/rucksack@2x.jpg 2x" alt="">
                             </div>
 
                             <div class="folio-list__item-text">
                                 <div class="folio-list__item-cat">
-                                    Branding
+                                    Uber traffic
                                 </div>
                                 <div class="folio-list__item-title">
-                                    Rucksuck.
+                                    Acquisition, transformation et visualisation des données du traffic des voitures Uber.
                                 </div>
                             </div>
                         </a>
@@ -658,10 +642,9 @@
             </div> <!-- end column -->
 
 
-            <!-- Modal Templates Popup -->
+            <!-- Modal Templates Popup lifetime project -->
           <div id="modal-01" hidden>
               <div class="modal-popup">
-                  <img src="images/portfolio/gallery/g-fuji.jpg" alt="">
                   <!-- Scrollable content -->
                   <div class="modal-popup__scroll">
                   <div class="modal-popup__desc">
@@ -723,10 +706,9 @@
               </div>
           </div> <!-- end modal -->
 
-
+            <!--détails projet2  -->
             <div id="modal-02" hidden>
                 <div class="modal-popup">
-                    <img src="images/portfolio/gallery/g-lamp.jpg" alt="">
 
                     <div class="modal-popup__desc">
                         <h5>The White Lamp</h5>
@@ -736,23 +718,64 @@
                         </ul>
                     </div>
 
+                    
+
                     <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
                 </div>
             </div> <!-- end modal -->
+            
+            <!--détails projet3: DE uber traffic  -->
 
             <div id="modal-03" hidden>
                 <div class="modal-popup">
-                    <img src="images/portfolio/gallery/g-rucksack.jpg" alt="">
-
+                    <div class="modal-popup__scroll">
                     <div class="modal-popup__desc">
-                        <h5>Rucksuck</h5>
-                        <p>Exercitationem reprehenderit quod explicabo consequatur aliquid ut magni ut. Deleniti quo corrupti illum velit eveniet ratione necessitatibus ipsam mollitia.</p>
-                        <ul class="modal-popup__cat">
-                            <li>Product Design</li>
-                        </ul>
+                    <div id="carouselExample" class="carousel slide mt-4">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="images/DE1/pipeline.jpg" class="d-block w-100" alt="Image ">
+                            </div>
+                        </div>
                     </div>
-
-                    <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
+                    <h5>Uber : analyse du traffic des taxis</h5>
+                      <p>
+                        Création d’un pipeline de données avec GCP et Mage pour analyser le trafic Uber en temps réel. Les données GPS et trafic sont traitées pour optimiser les itinéraires, réduire les trajets à vide et améliorer la gestion de la flotte grâce à des tableaux de bord dynamiques et des insights précis.
+                      </p>
+                      <hr style="height: 0.1px;opacity: 0.2; background-color: black; margin: 10px 0;">
+                      <h5>Objectifs du projet :</h5>
+                      <ul>
+                          <li>Collecter et intégrer des données de trafic Uber provenant de plusieurs sources incluant les données GPS des véhicules et les temps de trajet.</li>
+                          <li>Transformer les données brutes en informations exploitables notamment sur les zones à forte demande.</li>
+                          <li>Automatiser le pipeline de traitement des données pour garantir des mises à jour rapides et précises.</li>
+                          <li>Stocker et analyser les données à l’aide d’outils de GCP.</li>
+                          <li>Visualiser les insights clés sur l'outil Looker.</li>
+                      </ul>
+                      <hr style="height: 0.1px;opacity: 0.2; background-color: black; margin: 10px 0;">
+                      <h5>Résultats :</h5>
+                      <ul>
+                            <li>Pipeline fonctionnel pour ingérer, transformer et stocker les données de trafic.</li>
+                            <li>Rapports dynamiques montrant les zones de congestion, les trajets optimisés et les pics de demande.</li>
+                            <li>Documentation complète sur l’architecture et les workflows Mage.</li>
+                            <li>Analyse approfondie des facteurs influençant l’espérance de vie :
+                                <ul>
+                                    <li>Identification des zones à forte demande (hotspots) en temps réel.</li>
+                                    <li>Allocation optimale des véhicules pour réduire les temps d’attente des passagers.</li>
+                                </ul>
+                            </li>
+                            <li>Réduction des trajets à vide :
+                                <ul>
+                                    <li>Itinéraires optimisés pour que les conducteurs passent moins de temps sans passagers.
+                                    </li>
+                                    <li>  Alignement dynamique des conducteurs avec les zones où la demande est prédite.
+                                    </li>
+                                </ul>
+                            </li>
+                      </ul>
+                      
+                </div>
+                </div>
+                </div>
+               
                 </div>
             </div> <!-- end modal -->
 
@@ -827,7 +850,6 @@
                             Nous serons ravies de répondre à toutes vos questions et prendrons en compte toutes vos propositions
                             d'amélioration.
                             N'hésitez pas à nous laisser un message ou nous appeler.
-
                         </p>
                     </div>
                 </div> <!-- end contact-top -->
@@ -843,11 +865,11 @@
                     <div class="column lg-4 md-5 tab-6 stack-on-550 contact-block">
                         <h3 class="text-pretitle">Réseaux sociaux</h3>
                         <ul class="contact-social">
-                            <li><a href="#0">Behance</a></li>
-                            <li><a href="#0">Dribble</a></li>
-                            <li><a href="#0">Twitter</a></li>
-                            <li><a href="#0">Instagram</a></li>
                             <li><a href="#0">Github</a></li>
+                            <li><a href="#0">Twitter</a></li>
+                            <li><a href="#0">Linkedin</a></li>
+                            <li><a href="#0">Instagram</a></li>
+
                         </ul>
                     </div>
                     <div class="column lg-4 md-12 contact-block">
